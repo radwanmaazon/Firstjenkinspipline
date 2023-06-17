@@ -1,0 +1,246 @@
+==1==
+•Name:
+Caffé Americano
+•Description:
+Caffé Americano is a type of coffee drink prepared by diliuting an espresso with hot water, giving it a similar strength to, but different flavor from, traditionally brewed coffee.
+•Price:
+10
+•Photo: pro7.jpg
+******
+
+==2==
+•Name:
+Café Latte
+•Description:
+Café Latte is a coffee drink made with espresso and steamed milk.
+•Price:
+20
+•Photo: pro5.jpg
+******
+
+==3==
+•Name:
+Cappuccion
+•Description:
+Cappuccino is an espresso-based coffee
+drink that originated in Italy, and is
+traditionaly prepared with steamed milk
+foam (microfoam).
+•Price:
+30
+•Photo: pro3.jpg
+******
+
+==4==
+•Name:
+Espresso
+•Description:
+Espresso is a coffee-making method of
+Italian origin, in which a small amount of
+nearly boiling water is forced under
+pressure (expressed) through finely-ground
+coffee beans.
+•Price:
+35
+•Photo: pro6.jpg
+******
+
+==5==
+•Name:
+Chocolate Coffee
+•Description:
+Chocolate Coffee is a Coffee with small
+pieces of chocolate with high quality fresh
+milk.
+•Price:
+40
+•Photo: pro1.jpg
+******
+
+==6==
+•Name:
+Arabica Coffee
+•Description:
+Arabica is most popular type of coffee,
+hands down. Depending on who you ask, many
+coffee enthusiasts prefer using Arabica
+beans due to its taste.
+•Price:
+37
+•Photo: Arabica.jpg
+******
+
+==7==
+•Name:
+Robusta Coffee
+•Description:
+While Arabica is the most popular, Robusta
+is cheaper and stronger. Because of its
+bitter flavor, you’ll typically see Robusta
+used for espresso drinks and in instant
+coffee mixes.
+•Price:
+47
+•Photo: Robusta.jpg
+******
+
+==8==
+•Name:
+Black Coffee
+•Description:
+Black coffee is as simple as it gets with
+ground coffee beans steeped in hot water,
+served warm.
+•Price:
+19
+•Photo: Black.jpg
+******
+
+==9==
+•Name:
+Doppio Coffee
+•Description:
+A double shot of espresso, the doppio is
+perfect for putting extra pep in your step.
+•Price:
+50
+•Photo: Doppio.jpg
+******
+
+==10==
+•Name:
+Cortado Coffee
+•Description:
+Like yin and yang, a cortado is the perfect
+balance of espresso and warm steamed milk.
+•Price:
+37
+•Photo: Cortado.jpg
+******
+
+==11==
+•Name:
+Red Eye Coffee
+•Description:
+Named after those pesky midnight flights, a
+red eye can cure any tiresome morning. A
+full cup of hot coffee with an espresso shot
+mixed in, this will definitely get your
+heart racing.
+•Price:
+57
+•Photo: RedEye.jpg
+******
+
+==12==
+•Name:
+Galão Coffee
+•Description:
+Originating in Portugal, this hot coffee
+drink is closely related to the latte and
+cappuccino. Only difference is it contains
+about twice as much foamed milk, making it a
+lighter drink compared to the other two.
+•Price:
+37
+•Photo: Galao.jpg
+******
+
+==13==
+•Name:
+Lungo Coffee
+•Description:
+A lungo is a long-pull espresso. The longer
+the pull, the more caffeine there is and the
+more ounces you can enjoy.
+•Price:
+59
+•Photo: Lungo.jpg
+******
+
+==14==
+•Name:
+Macchiato Coffee
+•Description:
+The macchiato is another espresso-based
+drink that has a small amount of foam on
+top. It’s the happy medium between a
+cappuccino and a doppio.
+•Price:
+35
+•Photo: Macchiato.jpg
+******
+
+==15==
+•Name:
+Mocha Coffee
+•Description:
+For all you chocolate lovers out there,
+you’ll fall in love with a mocha (or maybe
+you already have).
+•Price:
+60
+•Photo: Mocha.jpg
+******
+
+==16==
+•Name:
+Ristretto Coffee
+•Description:
+Ristretto is an espresso shot. It uses less
+hot water which creates a sweeter flavor
+compared to the bitter taste of a
+traditional shot of espresso or a doppio.
+•Price:
+37
+•Photo: Doppio.jpg
+******
+
+==17==
+•Name:
+Flat White Coffee
+•Description:
+This Aussie-born drink is basically a
+cappuccino without the foam or chocolate
+sprinkle. It’s an espresso drink with
+steamed milk.
+•Price:
+46
+•Photo: FlatWhite.jpg
+******
+
+==18==
+•Name:
+Affogato Coffee
+•Description:
+The affogato is an excuse to enjoy a scoop
+of ice cream any time of day (and any time
+of year in my opinion).
+•Price:
+55
+•Photo: Affogato.jpg
+******
+
+==19==
+•Name:
+Irish Coffee
+•Description:
+Irish coffee consists of black coffee,
+whiskey and sugar, topped with whipped
+cream.
+•Price:
+56
+•Photo: Irish.jpg
+******
+
+==20==
+•Name:
+Iced Coffee
+•Description:
+A coffee with ice, typically served with a
+dash of milk, cream or sweetener-iced coffee
+is really as simple as that.
+•Price:
+45
+•Photo: IcedCoffee.jpg
+******
