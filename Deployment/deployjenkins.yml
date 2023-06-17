@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: mycoffeestore
+  name: mycofeestore
+  namespace: jenkins
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mycoffeestore
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: mycoffeestore
+    spec:
+      containers:
+      - image: 
+        name: nginx
+        resources: {}
+status: {}

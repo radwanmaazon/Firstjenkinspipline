@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels: 
+    app: mycoffeestore
+  name: coffeestore-svc
+spec:
+  selector:
+    app: mycoffeestore
+  ports:
+    - name: coffeestore
+      protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30101
+  type: NodePort
+  
