@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-jnkns
+  labels:
+    app: jenkins
+  namespace: jenkins
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jenkins
+  template:
+    metadata:
+      labels:
+        app: jenkins
+    spec:
+      initContainers:
+      - name: install-docker
+        image: docker:stable
+        command: ["cp", "/usr/local/bin/docker", "/data/docker"]
+        volumeMounts:
+        - name: docker
+          mountPath: "/data"
+      - name: install-kubectl
+        image: eslamkarim/jenkins-ansible-kubectl
+        command: ["cp", "/usr/local/bin/kubectl", "/data/kubectl"]
+        volumeMounts:
+        - name: kubectl 
+          mountPath: "/data"
+
+      containers:
+      - name: jenkins-cont
+        image: jenkins/jenkins:lts-jdk11
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        volumeMounts:
+        # mount jenkins run file 
+        - name: pvc-jnkns-dep
+          mountPath: /var/jenkins_home 
+        # mount to connect to the Docker daemon socket
+        - name: docker-sock
+          mountPath: /var/run
+          
+        - name: docker
+          subPath: "docker"
+          mountPath: "/usr/local/bin/docker"
+        - name: kubectl 
+          subPath: "kubectl"
+          mountPath: "/usr/local/bin/kubectl"
+      
+      volumes: 
+      - name: docker-sock
+        hostPath:
+          path: /var/run
+          type: ""
+      - name: pvc-jnkns-dep
+        persistentVolumeClaim:
+          claimName: pvc-jnkns
+      - name: docker
+        emptyDir: {} 
+      - name: kubectl
+        emptyDir: {}
