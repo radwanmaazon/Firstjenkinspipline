@@ -1,16 +1,14 @@
 pipeline {
     agent any
 
-    stages {
+      stages {
         stage('build') {
             steps {
                 echo 'build'
                 sh "echo ${BUILD_NUMBER}"
             }
         }
-    }
-    stages {
-    stage('test') {
+        stage('test') {
             steps {
                 echo 'test'
                 sh """
@@ -20,5 +18,4 @@ pipeline {
                 """
             }
         }
-    }
 }
