@@ -18,9 +18,9 @@ pipeline {
             steps {
                 echo 'deploy'
                 sh """
-                    cp Deployment/deployment.yml Deployment/deployment.yml.tmp
-                    cat Deployment/deployment.yml.tmp | envsubst > Deployment/deployment.yml
-                    cat Deployment/deployment.yml
+                    cp Deployment/deployjenkins.yml Deployment/deployjenkins.yml.tmp
+                    cat Deployment/deployjenkins.yml.tmp | envsubst > Deployment/deployjenkins.yml
+                    cat Deployment/deployjenkins.yml
                 """
             }
         }
