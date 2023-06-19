@@ -10,7 +10,7 @@ pipeline {
         }
         stage('deploy') {
             steps {
-                echo 'test'
+                echo 'deploy'
                 sh """
                     echo "build number is ${BUILD_NUMBER}"
                     docker ps
