@@ -7,9 +7,9 @@ pipeline {
                 echo 'build'
                 withCredentials([usernamePassword(credentialsId: 'radwandocker-ID', passwordVariable: 'dockerpass', usernameVariable: 'dockeruser')]) {
                 sh """
-                    docker build -t  radwanmaazon/coffeewebsite .
+                    docker build -t  radwanmaazon/coffeewebsite:${BUILD_NUMBER} .
                     docker login -u ${dockeruser} -p ${dockerpass}
-                    docker push radwanmaazon/coffeewebsite
+                    # docker push radwanmaazon/coffeewebsite:${BUILD_NUMBER}
                 """
                 }
             }
@@ -18,9 +18,9 @@ pipeline {
             steps {
                 echo 'deploy'
                 sh """
-                    echo "build number is ${BUILD_NUMBER}"
-                    docker ps
-                    curl --help
+                    cp Deployment/deployment.yml Deployment/deployment.yml.tmp
+                    cat Deployment/deployment.yml.tmp | envsubst > Deployment/deployment.yml
+                    cat Deployment/deployment.yml
                 """
             }
         }
