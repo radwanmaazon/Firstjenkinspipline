@@ -4,6 +4,7 @@ metadata:
   labels: 
     app: mycoffeestore
   name: coffeestore-svc
+  namespace: jenkins
 spec:
   selector:
     app: mycoffeestore
