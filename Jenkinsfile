@@ -9,7 +9,7 @@ pipeline {
                 sh """
                     docker build -t  radwanmaazon/coffeewebsite:${BUILD_NUMBER} .
                     docker login -u ${dockeruser} -p ${dockerpass}
-                    docker push radwanmaazon/coffeewebsite:${BUILD_NUMBER}
+                    #docker push radwanmaazon/coffeewebsite:${BUILD_NUMBER}
                 """
                 }
             }
@@ -17,7 +17,7 @@ pipeline {
         stage('deploy') {
             steps {
                 echo 'deploy'
-                withCredentials([file(credentialsId: 'kubernates-ID', variable: 'Kubeconfig')]) {
+                withCredentials([file(credentialsId: 'kubernates-ID', variable: 'KUBECONFIG')]) {
                 sh """
                     cp Deployment/deployjenkins.yml Deployment/deployjenkins.yml.tmp
                     cat Deployment/deployjenkins.yml.tmp | envsubst > Deployment/deployjenkins.yml
