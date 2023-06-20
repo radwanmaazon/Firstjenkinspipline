@@ -19,7 +19,7 @@ spec:
         app: mycoffeestore
     spec:
       containers:
-      - image: radwanmaazon/coffeewebsite:${BUILD_NUMBER}
+      - image: radwanmaazon/coffeewebsite
         name: nginx
         resources: {}
 status: {}
