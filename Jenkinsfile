@@ -23,6 +23,7 @@ pipeline {
                     cat Deployment/deployjenkins.yml.tmp | envsubst > Deployment/deployjenkins.yml
                     rm Deployment/deployjenkins.yml.tmp
                     # kubectl apply -f Deployment --kubeconfig=${KUBECONFIG}
+                    echo ${KUBECONFIG}
                 """                
                 }
             }
