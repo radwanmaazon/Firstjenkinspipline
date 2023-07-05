@@ -10,11 +10,12 @@ pipeline {
                     docker build -t  radwanmaazon/coffeewebsite:${BUILD_NUMBER} .
                     docker login -u ${dockeruser} -p ${dockerpass}
                     #docker push radwanmaazon/coffeewebsite:${BUILD_NUMBER}
+                    # RADWAN
                 """
                 }
             }
-        }
-        
+        } 
+
         stage('deploy') {
             steps {
                 echo 'deploy'
