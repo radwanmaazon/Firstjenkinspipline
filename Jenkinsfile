@@ -6,12 +6,12 @@ pipeline {
             steps {
                 echo 'build'
                 withCredentials([usernamePassword(credentialsId: 'radwandocker-ID', passwordVariable: 'dockerpass', usernameVariable: 'dockeruser')]) {
-                sh """
+              /*  sh """
                     docker build -t  radwanmaazon/coffeewebsite:${BUILD_NUMBER} .
                     docker login -u ${dockeruser} -p ${dockerpass}
                     #docker push radwanmaazon/coffeewebsite:${BUILD_NUMBER}
                     # RADWAN
-                """
+                """*/
                 }
             }
         } 
