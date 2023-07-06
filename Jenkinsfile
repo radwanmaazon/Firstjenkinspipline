@@ -19,14 +19,7 @@ pipeline {
         stage('deploy') {
             steps {
                 echo 'deploy'
-                sh  """
-                    cp Deployment/deployjenkins.yml Deployment/deployjenkins.yml.tmp
-                    cat Deployment/deployjenkins.yml.tmp | envsubst > Deployment/deployjenkins.yml
-                    rm Deployment/deployjenkins.yml.tmp
-                    #kubectl apply -f Deployment
-                    ls Deployment 
-                    """
-                /*withCredentials([file(credentialsId: 'kubernates-ID', variable: 'KUBECONFIG')]) { 
+                withCredentials([file(credentialsId: 'kubernates-ID', variable: 'KUBECONFIG')]) { 
                 sh """
                     cp Deployment/deployjenkins.yml Deployment/deployjenkins.yml.tmp
                     cat Deployment/deployjenkins.yml.tmp | envsubst > Deployment/deployjenkins.yml
@@ -35,7 +28,7 @@ pipeline {
                     
                     # echo ${KUBECONFIG}
                 """                
-                }*/
+                }
             }
         }
     }
