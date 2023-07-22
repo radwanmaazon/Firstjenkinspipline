@@ -19,7 +19,7 @@ pipeline {
         stage('deploy') {
             steps {
                 echo 'deploy'
-                withCredentials([file(credentialsId: 'kubernates-ID', variable: 'KUBECONFIG')]) { 
+              
                 sh """
                     cp Deployment/deployjenkins.yml Deployment/deployjenkins.yml.tmp
                     cat Deployment/deployjenkins.yml.tmp | envsubst > Deployment/deployjenkins.yml
@@ -28,7 +28,7 @@ pipeline {
                     
                     # echo ${KUBECONFIG}
                 """                
-                }
+               
             }
         }
     }
