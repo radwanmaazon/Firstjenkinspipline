@@ -9,7 +9,7 @@ pipeline {
                 sh """
                     docker build -t  radwanmaazon/coffeewebsite:${BUILD_NUMBER} .
                     docker login -u ${dockeruser} -p ${dockerpass}
-                    # docker push radwanmaazon/coffeewebsite:${BUILD_NUMBER}
+                    docker push radwanmaazon/coffeewebsite:${BUILD_NUMBER}
                     # RADWAN
                 """
                 }
@@ -24,9 +24,9 @@ pipeline {
                     cp Deployment/deployjenkins.yml Deployment/deployjenkins.yml.tmp
                     cat Deployment/deployjenkins.yml.tmp | envsubst > Deployment/deployjenkins.yml
                     rm Deployment/deployjenkins.yml.tmp
-                    kubectl apply -f Deployment   # --kubeconfig=${KUBECONFIG}
+                    kubectl apply -f Deployment   --kubeconfig=${KUBECONFIG}
                     
-                    echo ${KUBECONFIG}
+                    # echo ${KUBECONFIG}
                 """                
                 }
             }
