@@ -11,3 +11,4 @@ $   kubectl apply -f  jenkins/nodeport-jenkins.yml
 $   kubectl apply -f  jenkins/jenkins-slave.yml
 $   kubectl apply -f  jenkins/jenkins-slave-svc.yml
 ```
+You may have some issuse when deply jenkins as deployment on minikube and make a init container to install docker and kubectl and mount them on jenkins pod. You can work around this problem by give dockerfile full permissions and deploy file again.
