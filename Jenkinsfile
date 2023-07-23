@@ -1,7 +1,7 @@
 pipeline {
     agent  {  label "jenkins-slave-1" }
     parameters {
-        choise (name: 'ENV' , choises: ['dev', 'test', 'prod', 'release'])
+        choise(name: 'ENV' , choises: ['dev', 'test', 'prod', 'release'])
     }
     stages {
         stage('build') {
