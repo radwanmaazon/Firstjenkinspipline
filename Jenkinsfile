@@ -14,7 +14,7 @@ pipeline {
                             docker build -t  radwanmaazon/coffeewebsite:${BUILD_NUMBER} .
                             docker login -u ${dockeruser} -p ${dockerpass}
                             docker push radwanmaazon/coffeewebsite:${BUILD_NUMBER}
-                            # RADWAN
+                            echo ${BUILD_NUMBER} > ../coffeewebsite-build_number.txt
                         """
                         }
                     }
@@ -29,6 +29,7 @@ pipeline {
                     if (params.ENV == 'test'|| params.ENV == 'dev'|| params.ENV == 'prod'){
                         withCredentials([file(credentialsId: 'kubernates-ID', variable: 'KUBECONFIG')]) { 
                             sh """
+                                export BUILD_NUMBER=\$(cat ../coffeewebsite-build_number.txt)
                                 cp Deployment/deployjenkins.yml Deployment/deployjenkins.yml.tmp
                                 cat Deployment/deployjenkins.yml.tmp | envsubst > Deployment/deployjenkins.yml
                                 rm Deployment/deployjenkins.yml.tmp
