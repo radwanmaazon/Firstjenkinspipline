@@ -1,14 +1,14 @@
 pipeline {
     agent  {  label "jenkins-slave-1" }
-    parameters {
-        choice (name: 'ENV' , choices: ['dev', 'test', 'prod', 'release'])
-    }
+    /*parameters {
+        choice (name: 'ENV' , choices: '${BRANCH_NAME}')
+    }*/
     stages {
         stage('build') {
             steps {
                 echo 'build'
                 script {
-                    if (params.ENV == 'release'){
+                    if (env.BRANCH_NAME  == 'release'){
                         withCredentials([usernamePassword(credentialsId: 'radwandocker-ID', passwordVariable: 'dockerpass', usernameVariable: 'dockeruser')]) {
                         sh """
                             docker build -t  radwanmaazon/coffeewebsite:${BUILD_NUMBER} .
