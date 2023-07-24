@@ -7,9 +7,8 @@ pipeline {
         stage('build') {
             steps {
                 echo 'build'
-                echo ${BRANCH_NAME} 
                 script {
-                    if (${BRANCH_NAME}  == 'release'){
+                    if (BRANCH_NAME  == 'release'){
                         withCredentials([usernamePassword(credentialsId: 'radwandocker-ID', passwordVariable: 'dockerpass', usernameVariable: 'dockeruser')]) {
                         sh """
                             docker build -t  radwanmaazon/coffeewebsite:${BUILD_NUMBER} .
@@ -27,7 +26,7 @@ pipeline {
             steps {
                 echo 'deploy'
                 script {
-                    if (env.BRANCH_NAME == 'test'|| env.BRANCH_NAME == 'dev'|| env.BRANCH_NAME == 'prod'){
+                    if (BRANCH_NAME == 'test'|| BRANCH_NAME == 'dev'|| BRANCH_NAME == 'prod'){
                         withCredentials([file(credentialsId: 'kubernates-ID', variable: 'KUBECONFIG')]) { 
                             sh """
                                 export BUILD_NUMBER=\$(cat ../coffeewebsite-build_number.txt)
