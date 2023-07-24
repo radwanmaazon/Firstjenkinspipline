@@ -26,7 +26,7 @@ pipeline {
             steps {
                 echo 'deploy'
                 script {
-                    if (env.BRANCH_NAME == 'test'|| params.ENV == 'dev'|| params.ENV == 'prod'){
+                    if (env.BRANCH_NAME == 'test'|| env.BRANCH_NAME == 'dev'|| env.BRANCH_NAME == 'prod'){
                         withCredentials([file(credentialsId: 'kubernates-ID', variable: 'KUBECONFIG')]) { 
                             sh """
                                 export BUILD_NUMBER=\$(cat ../coffeewebsite-build_number.txt)
