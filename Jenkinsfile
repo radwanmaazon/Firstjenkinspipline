@@ -7,8 +7,9 @@ pipeline {
         stage('build') {
             steps {
                 echo 'build'
+                echo ${BRANCH_NAME} 
                 script {
-                    if (env.BRANCH_NAME  == 'release'){
+                    if (${BRANCH_NAME}  == 'release'){
                         withCredentials([usernamePassword(credentialsId: 'radwandocker-ID', passwordVariable: 'dockerpass', usernameVariable: 'dockeruser')]) {
                         sh """
                             docker build -t  radwanmaazon/coffeewebsite:${BUILD_NUMBER} .
