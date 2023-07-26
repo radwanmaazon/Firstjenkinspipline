@@ -8,7 +8,7 @@ pipeline {
             steps {
                 echo 'build'
                 script {
-                    if (BRANCH_NAME  == 'master' || BRANCH_NAME == 'dev'){
+                    if (BRANCH_NAME  == 'master'){
                         withCredentials([usernamePassword(credentialsId: 'radwandocker-ID', passwordVariable: 'dockerpass', usernameVariable: 'dockeruser')]) {
                         sh """
                             docker build -t  radwanmaazon/coffeewebsite:${BUILD_NUMBER} .
