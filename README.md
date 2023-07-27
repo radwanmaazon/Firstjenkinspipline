@@ -16,4 +16,23 @@ You may have some issuse when deploying jenkins as deployment on minikube and ma
 $  chmod 777 /var/run/docker.sock 
 ```
 configure slave to deploy website on it 
+## Deploying website by slave which deploying on minikube and IP for minikube 192.168.49.2 and port for slave service 30101
+# 1- 
+![image](https://github.com/redwan2050/Firstjenkinspipline/blob/master/images/website-1.png)
+# 2- 
+![image](https://github.com/redwan2050/Firstjenkinspipline/blob/master/images/website-2.png)
+## deploying jenkins on minikube and access it by nodeport service 192.168.49.2:30100
+# 1- 
+![image](https://github.com/redwan2050/Firstjenkinspipline/blob/master/images/jenkins.png)
+# 2- 
+![image](https://github.com/redwan2050/Firstjenkinspipline/blob/master/images/jenkins-master.png)
+# 3- 
+![image](https://github.com/redwan2050/Firstjenkinspipline/blob/master/images/branches.png)
+## Ownership
+![Radwan Maazon](images/Radwan1.jpg)|
+|:-----------------:|
+|[Radwan Maazon](https://github.com/redwan2050)|
+
+
+
 
