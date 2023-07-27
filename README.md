@@ -29,7 +29,7 @@ configure slave to deploy website on it
 # 3- 
 ![image](https://github.com/redwan2050/Firstjenkinspipline/blob/master/images/branches.png)
 ## Ownership
-![Radwan Maazon](images/Radwan1.jpg)(https://github.com/redwan2050)|
+![Radwan Maazon](images/Radwan1.jpg)|
 |:-----------------:|
 |[Radwan Maazon](https://github.com/redwan2050)|
 
