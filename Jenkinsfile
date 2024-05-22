@@ -1,5 +1,5 @@
 pipeline {
-    agent  {  label "flask-slave" }
+    agent  {  label "jenkins-slave-1" }
     /*parameters {
         choice (name: 'ENV' , choices: '${BRANCH_NAME}')
     }*/
