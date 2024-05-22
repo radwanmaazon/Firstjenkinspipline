@@ -1,5 +1,5 @@
 pipeline {
-    agent  {  label "jenkins-slave-1" }
+    agent  {  label "flask-slave" }
     parameters {
         choice (name: 'ENV' , choices: ['dev', 'test', 'prod', 'release'])
     }
